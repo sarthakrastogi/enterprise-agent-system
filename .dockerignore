@@ -1,0 +1,8 @@
+.venv
+.git
+**/__pycache__
+**/*.pyc
+infra/.terraform
+infra/*.tfstate*
+build
+frontend/.streamlit/secrets.toml

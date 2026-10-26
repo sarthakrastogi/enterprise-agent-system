@@ -1,0 +1,37 @@
+[project]
+name = "enterprise-agent-platform"
+version = "0.1.0"
+description = "Open-source enterprise AI agent platform on AWS Bedrock AgentCore, managed with Terraform"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+dependencies = [
+  "bedrock-agentcore>=1.25,<2",
+  "langchain>=1.4,<2",
+  "langgraph>=1.2,<2",
+  "langchain-aws>=1.9,<2",
+  "langgraph-checkpoint-aws>=1.2.6,<2",
+  "langchain-mcp-adapters>=0.3.2,<0.4",
+  "pyjwt>=2.8",
+]
+
+[project.optional-dependencies]
+otel = [
+  "aws-opentelemetry-distro>=0.18.0",
+  "opentelemetry-instrumentation-langchain>=0.40",
+]
+dev = ["pytest>=8", "mcp>=1.28.1,<2", "boto3"]
+
+[tool.setuptools.packages.find]
+include = ["eap*", "agents*"]
+
+[tool.setuptools.package-data]
+agents = ["prompts/*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
