@@ -1,62 +1,55 @@
-# Enterprise Agent Platform
+<p align="center">
+  <img src="assets/banner.svg" alt="Enterprise Agent Platform: run AI agents in a company on AWS Bedrock AgentCore, managed entirely with Terraform" width="100%">
+</p>
 
-An open-source, batteries-included platform for running AI agents in a company, built on **AWS Bedrock AgentCore** and managed entirely with **Terraform**. No console clicks.
+<p align="center">
+  <b><h1>Enterprise Agent System</h1></b><br>
+  <b>An open-source platform for running AI agents for your company. Built on AWS Bedrock AgentCore. Managed entirely with Terraform.</b><br>
+</p>
 
-- **Define an agent in a few lines of Python.** Set a prompt, tools and a model in an `AgentSpec`. The platform handles hosting, auth, memory, tools, tracing and evaluation.
-- **Write tools as Python MCP servers** (FastMCP) or Lambda functions. All of them sit behind one governed **AgentCore Gateway**.
-- **Every call runs as the signed-in user.** A user's token flows from the chat UI to the agent, the gateway, the tool policy and the tool.
-- **Observability on CloudWatch out of the box.** You get OTEL traces, the GenAI Observability console, a dashboard, alarms, user feedback and LLM-judged online evaluations.
-- **A simple Python chat UI** (Streamlit) with SSO, an agent picker and streaming.
+<p align="center">
+  <!--img src="https://img.shields.io/badge/AWS-Bedrock%20AgentCore-ff9900?style=flat-square" alt="AWS Bedrock AgentCore"-->
+  <img src="https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform">
+  <img src="https://img.shields.io/badge/langgraph-%231C3C3C.svg?style=for-the-badge&logo=langgraph&logoColor=white" alt="LangGraph">
+  <!--img src="https://img.shields.io/badge/Tools-MCP-2563eb?style=flat-square" alt="MCP"-->
+  <img src="https://img.shields.io/badge/python-%233670A0.svg?style=for-the-badge&logo=python&logoColor=ffdd54 " alt="Python 3.10+">
+  <img src="https://img.shields.io/badge/license-Apache--2.0-blue?style=flat-square" alt="Apache-2.0">
+</p>
 
-```
- Browser ──OIDC──▶ Cognito
-    │
-    ▼
- Streamlit chat UI ──Bearer user JWT──▶ AgentCore Runtime (one per agent, same image)
-                                         │  LangGraph autonomous agent
-                                         │  + Bedrock model with Guardrails
-                                         │  + AgentCore Memory (per user)
-                                         │  + Code Interpreter, sub-agents
-                                         │
-                                         └──user JWT──▶ AgentCore Gateway (MCP)
-                                                         │  JWT authorizer
-                                                         │  request interceptor (stamps real user)
-                                                         │  Cedar policy (per-user tool access)
-                                                         ├──SigV4──▶ knowledge MCP server (Runtime, FastMCP)
-                                                         └──SigV4──▶ tickets Lambda (DynamoDB)
+<br>
 
- Everything ──OTEL / vended logs / metrics──▶ CloudWatch ──▶ Online evaluations, dashboard, alarms
-```
+---
 
-## What's in the box
+- **Agents are Python files.** Set a prompt, tools and a model in an `AgentSpec`. The platform handles the rest.
+- **Tools are Python MCP servers or Lambdas.** All of them sit behind one governed **AgentCore Gateway**.
+- **Every call runs as the signed-in user.** The user's token flows from the chat UI to the agent, the gateway, the tool policy and the tool.
+- **Observability is built in.** OTEL traces, the GenAI Observability console, a dashboard, alarms, user feedback and LLM-judged online evaluations, all on CloudWatch.
+- **One chat UI.** Streamlit with SSO, an agent picker and streaming.
 
-| Need | How it's done | Where |
-|---|---|---|
-| Agents defined without boilerplate | `AgentSpec` in `agents/<name>.py`, prompt in markdown | [agents/](agents/), [eap/spec.py](eap/spec.py) |
-| Agent hosting | One AgentCore Runtime per agent, all running the same LangGraph image; microVM per session, 8h sessions | [eap/runtime/](eap/runtime/), [infra/agents.tf](infra/agents.tf) |
-| Free, autonomous agents | LangChain `create_agent` tool-calling loop (custom LangGraph graphs optional) | [eap/runtime/builder.py](eap/runtime/builder.py) |
-| Multi-agent | `sub_agents=[...]`: agents call other agents as tools, with the same user identity | [agents/it_helpdesk.py](agents/it_helpdesk.py) |
-| Python MCP servers | FastMCP on AgentCore Runtime (`server_protocol = "MCP"`), reachable only through the gateway | [mcp_servers/knowledge/](mcp_servers/knowledge/), [infra/mcp_servers.tf](infra/mcp_servers.tf) |
-| Lambda tools | Gateway Lambda target with Terraform-declared tool schemas | [lambdas/tickets/](lambdas/tickets/), [infra/gateway.tf](infra/gateway.tf) |
-| Tool gateway | AgentCore Gateway: JWT inbound, semantic tool search, request interceptor | [infra/gateway.tf](infra/gateway.tf), [lambdas/interceptor/](lambdas/interceptor/) |
-| Per-user tool permissions | Cedar policies at the gateway (default deny; admin-only tools) | [infra/policy.tf](infra/policy.tf) |
-| SSO and identity | Cognito user pool and groups; runtime JWT authorizer with group check | [infra/auth.tf](infra/auth.tf) |
-| Memory | AgentCore Memory: conversation checkpoints plus long-term facts/preferences per user | [eap/runtime/memory.py](eap/runtime/memory.py), [infra/memory.tf](infra/memory.tf) |
-| Safety | Bedrock Guardrail on every model call (prompt attacks, harmful content, secrets/PII) | [infra/guardrail.tf](infra/guardrail.tf) |
-| Code execution | AgentCore Code Interpreter as a built-in tool | [eap/runtime/tools.py](eap/runtime/tools.py) |
-| Observability | ADOT/OTEL traces, Transaction Search, vended gateway/memory logs, usage logs, dashboard, alarms | [infra/observability.tf](infra/observability.tf), [eap/runtime/metrics.py](eap/runtime/metrics.py) |
-| Quality monitoring | AgentCore online evaluations (goal success, helpfulness, correctness, tool selection) | [infra/evals.tf](infra/evals.tf) |
-| Chat UI | Streamlit with `st.login` (OIDC), agent picker, streaming, tool status, thumbs feedback | [frontend/app.py](frontend/app.py) |
-| No clickops | Everything is Terraform; `scripts/deploy.sh` builds images and applies | [infra/](infra/), [scripts/](scripts/) |
+
+---
+
+<!--## Architecture
+
+
+<p align="center">
+  <img src="assets/architecture.svg" alt="Architecture: the user's JWT flows from the Streamlit UI to an AgentCore Runtime, then to AgentCore Gateway, where Cedar policy is checked before a Python MCP server or Lambda runs. Everything reports to CloudWatch." width="100%">
+</p>-->
+
 
 ## Quick start
 
-**Prerequisites:**
-- An AWS account where Bedrock AgentCore is available. The default region is `us-west-2`.
-- Bedrock model access for your chosen model.
-- Terraform 1.10 or later.
-- Docker with buildx. AgentCore needs `linux/arm64` images; buildx cross-builds them on x86.
-- AWS CLI v2 and Python 3.10 or later.
+### Prerequisites
+
+| You need | Notes |
+|---|---|
+| **AWS account** with Bedrock AgentCore available | Default region is `us-west-2` |
+| **Bedrock model access** | For the model you choose |
+| **Terraform** 1.10+ | |
+| **Docker with buildx** | AgentCore needs `linux/arm64` images. buildx cross-builds them on x86 |
+| **AWS CLI v2** and **Python** 3.10+ | |
+
+### Deploy
 
 ```bash
 make install                 # local venv for tests, local runs and the UI
@@ -93,37 +86,76 @@ agent = AgentSpec(
 )
 ```
 
-Then run `make deploy`. You get a new runtime, IAM role, alarms, online evaluation and an entry in the UI. See [docs/adding-an-agent.md](docs/adding-an-agent.md) for all the options, including custom LangGraph workflows.
+Run `make deploy`. You get a new runtime, IAM role, alarms, online evaluation and an entry in the UI. See [docs/adding-an-agent.md](docs/adding-an-agent.md) for every option, including custom LangGraph workflows and sub-agents.
 
 ## Add a tool
 
-- **Python MCP server:** see [docs/adding-an-mcp-server.md](docs/adding-an-mcp-server.md). Copy `mcp_servers/knowledge`, then add a runtime and a gateway target in Terraform.
-- **Lambda:** add a function and a `aws_bedrockagentcore_gateway_target` with its tool schema, as the `tickets` target does.
-- **Permissions:** in both cases, permit the new tool in [infra/policy.tf](infra/policy.tf). It is denied until you do.
+| Kind | How | Guide |
+|---|---|---|
+| **Python MCP server** | Copy `mcp_servers/knowledge`, then add a runtime and a gateway target in Terraform | [docs/adding-an-mcp-server.md](docs/adding-an-mcp-server.md) |
+| **Lambda** | Add a function and an `aws_bedrockagentcore_gateway_target` with its tool schema, as the `tickets` target does | [lambdas/tickets/](lambdas/tickets/) |
+
+In both cases, permit the new tool in [infra/policy.tf](infra/policy.tf). It is denied until you do.
+
+---
+
+## What's included
+
+| Need | How it's done | Where |
+|---|---|---|
+| Agents without boilerplate | `AgentSpec` in `agents/<name>.py`, prompt in markdown | [agents/](agents/), [eap/spec.py](eap/spec.py) |
+| Agent hosting | One AgentCore Runtime per agent, all running the same LangGraph image. microVM per session, 8h sessions | [eap/runtime/](eap/runtime/), [infra/agents.tf](infra/agents.tf) |
+| Autonomous agents | LangChain `create_agent` tool-calling loop (custom LangGraph graphs optional) | [eap/runtime/builder.py](eap/runtime/builder.py) |
+| Multi-agent | `sub_agents=[...]`: agents call other agents as tools, with the same user identity | [agents/it_helpdesk.py](agents/it_helpdesk.py) |
+| Python MCP servers | FastMCP on AgentCore Runtime (`server_protocol = "MCP"`), reachable only through the gateway | [mcp_servers/knowledge/](mcp_servers/knowledge/), [infra/mcp_servers.tf](infra/mcp_servers.tf) |
+| Lambda tools | Gateway Lambda target with Terraform-declared tool schemas | [lambdas/tickets/](lambdas/tickets/), [infra/gateway.tf](infra/gateway.tf) |
+| Tool gateway | AgentCore Gateway: JWT inbound, semantic tool search, request interceptor | [infra/gateway.tf](infra/gateway.tf), [lambdas/interceptor/](lambdas/interceptor/) |
+| Per-user tool permissions | Cedar policies at the gateway (default deny, admin-only tools) | [infra/policy.tf](infra/policy.tf) |
+| SSO and identity | Cognito user pool and groups. Runtime JWT authorizer with group check | [infra/auth.tf](infra/auth.tf) |
+| Memory | AgentCore Memory: conversation checkpoints plus long-term facts and preferences per user | [eap/runtime/memory.py](eap/runtime/memory.py), [infra/memory.tf](infra/memory.tf) |
+| Safety | Bedrock Guardrail on every model call (prompt attacks, harmful content, secrets and PII) | [infra/guardrail.tf](infra/guardrail.tf) |
+| Code execution | AgentCore Code Interpreter as a built-in tool | [eap/runtime/tools.py](eap/runtime/tools.py) |
+| Observability | ADOT/OTEL traces, Transaction Search, vended gateway and memory logs, usage logs, dashboard, alarms | [infra/observability.tf](infra/observability.tf), [eap/runtime/metrics.py](eap/runtime/metrics.py) |
+| Quality monitoring | Online evaluations: goal success, helpfulness, correctness, tool selection | [infra/evals.tf](infra/evals.tf) |
+| Chat UI | Streamlit with `st.login` (OIDC), agent picker, streaming, tool status, thumbs feedback | [frontend/app.py](frontend/app.py) |
+| No clickops | Everything is Terraform. `scripts/deploy.sh` builds images and applies | [infra/](infra/), [scripts/](scripts/) |
+
+---
 
 ## Repository layout
 
-```
+```text
 agents/            agent definitions (AgentSpec) + prompts/*.md
 eap/               the SDK (spec, registry, manifest) and the shared runtime
 runtime/           Dockerfile for the shared agent image
 mcp_servers/       Python MCP servers (one dir each, own Dockerfile)
 lambdas/           Lambda tools and the gateway interceptor
 frontend/          Streamlit chat UI
-infra/             Terraform for everything
+infra/             Terraform to set up all infrastructure (Cognito, AgentCore, Gateway, Memory, Guardrail, Observability, Alarms, Evals)
 scripts/           deploy / destroy / create_user / configure_frontend
 tests/             unit and integration tests (no AWS)
-docs/              architecture and how-to guides
 ```
+
+---
 
 ## How it works
 
 [docs/architecture.md](docs/architecture.md) covers the request flow, the identity and trust model, design decisions and known limitations.
 
-## Status
+---
 
-This is a deliberately small reference platform. Everything runs, and the code paths are covered by tests that need no AWS account. The Terraform validates against `hashicorp/aws` 6.70. It is not yet hardened for production. [docs/architecture.md#production-checklist](docs/architecture.md#production-checklist) lists what to change before production: VPC mode, a remote Terraform state, a custom domain for the UI, and others.
+## Contributing
+
+**Try it on a real setup** - open any issues here: [Open an issue](https://github.com/sarthakrastogi/enterprise-agent-system/issues).
+
+You can also [DM me on LinkedIn 💭](https://www.linkedin.com/in/sarthakrastogi/) to discuss any issues.
 
 ## License
 
 Apache-2.0
+
+<br>
+
+<p align="center">
+  If this saves you time building an agent platform, consider giving it a ⭐<br>
+</p>

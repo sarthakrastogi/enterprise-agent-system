@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="730" viewBox="0 0 1280 730" role="img" aria-label="Architecture: browser signs in with Cognito, the chat UI calls an AgentCore Runtime with the user's JWT, the agent calls AgentCore Gateway with the same JWT, and the gateway checks Cedar policy before calling an MCP server or Lambda. Everything reports to CloudWatch." xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjMTg3OTJhMC1jY2ZmLTQ4MDUtOTJiMi0xMWJhZjM4Mjc3MDEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaNqciwEN6ncssHtHa1qq308AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDozYzRkZmUxMi1iOTgzLTQ0ZGQtYmZjNS1lOGRkNzk2ZWY1Y2ZscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoT7Tk4HCQ5y7BvFy2BHQK+AAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggODWkHGXxRUISMLxOp1Hcrmq0FFALlX0zCAqF2oiNNPmkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaD3sCGYWWZvmjHQ22KUig1IAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIGrmvN/E93ZEPfQBUjCrKb+0khO2xqhm3/+2c+AtcGIuZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQG8Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmMxODc5MmEwLWNjZmYtNDgwNS05MmIyLTExYmFmMzgyNzcwMS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmI5ZjM1YzBlLTM0ZmQtNDViNy1hMTNiLTkxMTllNmIzYTdlNnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCA4NaQcZfFFQhIwvE6nUdyuarQUUAuVfTMICoXaiI00+aJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg6XIr2muQ9bENve844GeBGGp0T+xtrSSe4ihs1DqM3AuiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggQyO0x+lztRAe3VMwpz93bNYeT0a/cQy0GkK9jYMqbL90Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQKEPlYZtpiLQn0bScGkCCMfPP8M7snTZGfpvJM5icG4mU69HnbK7lsNTQeETQdLziouqY+fvJVFCkr/nTZhj/Qo=</c2pa:manifest></metadata>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#0f1d3a"/>
+    </linearGradient>
+    <radialGradient id="glowAmber" cx="0.06" cy="0.05" r="0.5">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowTeal" cx="0.94" cy="0.97" r="0.55">
+      <stop offset="0" stop-color="#14b8a6" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#14b8a6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#fde68a"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+    <clipPath id="round"><rect width="1280" height="730" rx="20"/></clipPath>
+
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#cbd5e1"/>
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#5eead4"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrowRose" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#f9a8d4"/>
+    </marker>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="1280" height="730" fill="url(#bg)"/>
+    <rect width="1280" height="730" fill="url(#grid)"/>
+    <rect width="1280" height="730" fill="url(#glowAmber)"/>
+    <rect width="1280" height="730" fill="url(#glowTeal)"/>
+  </g>
+
+  <g font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+    <!-- heading -->
+    <text x="48" y="46" font-size="24" font-weight="800" fill="url(#title)" letter-spacing="-0.5">Enterprise Agent Platform: one request, end to end</text>
+    <text x="48" y="70" font-size="14" fill="#94a3b8">1 sign in   ·   2 user JWT to the agent   ·   3 same JWT to the gateway   ·   4 policy check, then the tool runs</text>
+
+    <!-- ============ LEFT COLUMN ============ -->
+    <!-- Cognito -->
+    <rect x="48" y="96" width="200" height="64" rx="12" fill="#3b82f6" fill-opacity="0.10" stroke="#60a5fa" stroke-opacity="0.6"/>
+    <text x="68" y="124" font-size="16" font-weight="700" fill="#f8fafc">Cognito</text>
+    <text x="68" y="144" font-size="12" fill="#94a3b8">employees · platform-admins</text>
+
+    <!-- Browser -->
+    <rect x="48" y="200" width="200" height="56" rx="12" fill="#3b82f6" fill-opacity="0.10" stroke="#60a5fa" stroke-opacity="0.6"/>
+    <text x="68" y="226" font-size="16" font-weight="700" fill="#f8fafc">Browser</text>
+    <text x="68" y="244" font-size="12" fill="#94a3b8">the signed-in user</text>
+
+    <!-- UI -->
+    <rect x="48" y="296" width="200" height="88" rx="12" fill="#3b82f6" fill-opacity="0.10" stroke="#60a5fa" stroke-opacity="0.6"/>
+    <text x="68" y="324" font-size="16" font-weight="700" fill="#f8fafc">Streamlit chat UI</text>
+    <text x="68" y="345" font-size="12" fill="#94a3b8">st.login · agent picker</text>
+    <text x="68" y="363" font-size="12" fill="#94a3b8">streaming · thumbs feedback</text>
+
+    <!-- left arrows -->
+    <line x1="148" y1="198" x2="148" y2="162" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="148" y1="258" x2="148" y2="294" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="166" y="184" font-size="12" fill="#cbd5e1">OIDC sign-in</text>
+
+    <!-- ============ AGENTCORE CONTAINER ============ -->
+    <rect x="312" y="84" width="700" height="440" rx="18" fill="#ffffff" fill-opacity="0.025" stroke="#fbbf24" stroke-opacity="0.55" stroke-dasharray="7 6"/>
+    <text x="336" y="106" font-size="12" font-weight="700" fill="#fbbf24" letter-spacing="1.5">AWS BEDROCK AGENTCORE</text>
+
+    <!-- Runtime -->
+    <rect x="336" y="120" width="250" height="250" rx="14" fill="#14b8a6" fill-opacity="0.10" stroke="#2dd4bf" stroke-opacity="0.7"/>
+    <text x="356" y="150" font-size="18" font-weight="700" fill="#f8fafc">Runtime</text>
+    <text x="356" y="170" font-size="12" fill="#99f6e4">one per agent · same image</text>
+    <g font-size="14" fill="#e2e8f0">
+      <circle cx="362" cy="202" r="3" fill="#5eead4"/><text x="376" y="207">LangGraph agent loop</text>
+      <circle cx="362" cy="230" r="3" fill="#5eead4"/><text x="376" y="235">microVM per session</text>
+      <circle cx="362" cy="258" r="3" fill="#5eead4"/><text x="376" y="263">JWT + group rule at the door</text>
+      <circle cx="362" cy="286" r="3" fill="#5eead4"/><text x="376" y="291">Bedrock model + Guardrail</text>
+      <circle cx="362" cy="314" r="3" fill="#5eead4"/><text x="376" y="319">Sub-agents as tools</text>
+    </g>
+
+    <!-- Memory -->
+    <rect x="336" y="394" width="110" height="64" rx="12" fill="#8b5cf6" fill-opacity="0.12" stroke="#a78bfa" stroke-opacity="0.7"/>
+    <text x="352" y="422" font-size="15" font-weight="700" fill="#f8fafc">Memory</text>
+    <text x="352" y="440" font-size="12" fill="#c4b5fd">per user</text>
+
+    <!-- Code interpreter -->
+    <rect x="458" y="394" width="128" height="64" rx="12" fill="#8b5cf6" fill-opacity="0.12" stroke="#a78bfa" stroke-opacity="0.7"/>
+    <text x="474" y="422" font-size="15" font-weight="700" fill="#f8fafc">Code Interp.</text>
+    <text x="474" y="440" font-size="12" fill="#c4b5fd">separate sandbox</text>
+
+    <!-- runtime -> memory / CI -->
+    <line x1="391" y1="372" x2="391" y2="392" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="522" y1="372" x2="522" y2="392" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Gateway -->
+    <rect x="652" y="120" width="336" height="250" rx="14" fill="#f59e0b" fill-opacity="0.10" stroke="#fbbf24" stroke-opacity="0.75"/>
+    <text x="672" y="150" font-size="18" font-weight="700" fill="#f8fafc">Gateway (MCP)</text>
+    <text x="672" y="170" font-size="12" fill="#fde68a">one governed front door</text>
+    <g font-size="13" fill="#e2e8f0">
+      <rect x="672" y="188" width="296" height="34" rx="9" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="688" y="210">JWT authorizer</text>
+      <rect x="672" y="232" width="296" height="34" rx="9" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="688" y="254">Request interceptor: stamps the real user</text>
+      <rect x="672" y="276" width="296" height="34" rx="9" fill="#f59e0b" fill-opacity="0.18" stroke="#fbbf24" stroke-opacity="0.6"/>
+      <text x="688" y="298" font-weight="700">Cedar policy: per-user tool access</text>
+      <rect x="672" y="320" width="296" height="34" rx="9" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="688" y="342">Semantic tool search</text>
+    </g>
+
+    <!-- MCP server -->
+    <rect x="652" y="396" width="170" height="64" rx="12" fill="#14b8a6" fill-opacity="0.10" stroke="#2dd4bf" stroke-opacity="0.7"/>
+    <text x="668" y="424" font-size="15" font-weight="700" fill="#f8fafc">MCP server</text>
+    <text x="668" y="442" font-size="12" fill="#99f6e4">knowledge · FastMCP</text>
+    <text x="838" y="420" font-size="11" font-style="italic" fill="#fde68a">only the gateway role</text>
+    <text x="838" y="436" font-size="11" font-style="italic" fill="#fde68a">can invoke this runtime</text>
+
+    <!-- runtime -> gateway -->
+    <line x1="588" y1="245" x2="650" y2="245" stroke="#5eead4" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
+    <text x="619" y="230" font-size="11" fill="#99f6e4" text-anchor="middle">same JWT</text>
+    <circle cx="619" cy="245" r="11" fill="#07111f" stroke="#5eead4" stroke-width="1.5"/>
+    <text x="619" y="249.5" font-size="12" font-weight="700" fill="#5eead4" text-anchor="middle">3</text>
+
+    <!-- gateway -> MCP -->
+    <line x1="737" y1="372" x2="737" y2="394" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrowAmber)"/>
+    <text x="748" y="388" font-size="11" fill="#fde68a">SigV4</text>
+
+    <!-- ============ RIGHT COLUMN ============ -->
+    <rect x="1052" y="150" width="190" height="64" rx="12" fill="#fb923c" fill-opacity="0.10" stroke="#fb923c" stroke-opacity="0.65"/>
+    <text x="1070" y="178" font-size="15" font-weight="700" fill="#f8fafc">Tickets Lambda</text>
+    <text x="1070" y="196" font-size="12" fill="#fed7aa">Terraform-declared schemas</text>
+
+    <rect x="1052" y="250" width="190" height="56" rx="12" fill="#fb923c" fill-opacity="0.10" stroke="#fb923c" stroke-opacity="0.65"/>
+    <text x="1070" y="276" font-size="15" font-weight="700" fill="#f8fafc">DynamoDB</text>
+    <text x="1070" y="294" font-size="12" fill="#fed7aa">tickets table</text>
+
+    <line x1="1147" y1="216" x2="1147" y2="248" stroke="#fb923c" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <text x="1052" y="346" font-size="11" font-style="italic" fill="#fde68a">Cedar: close_ticket is</text>
+    <text x="1052" y="362" font-size="11" font-style="italic" fill="#fde68a">admin-only. Everything else</text>
+    <text x="1052" y="378" font-size="11" font-style="italic" fill="#fde68a">is denied until permitted.</text>
+
+    <!-- gateway -> lambda -->
+    <line x1="990" y1="182" x2="1050" y2="182" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arrowAmber)"/>
+    <text x="1020" y="166" font-size="11" fill="#fde68a" text-anchor="middle">SigV4</text>
+    <circle cx="1020" cy="182" r="11" fill="#07111f" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="1020" y="186.5" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">4</text>
+
+    <!-- UI -> runtime -->
+    <line x1="250" y1="340" x2="334" y2="340" stroke="#5eead4" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
+    <text x="292" y="322" font-size="11" fill="#99f6e4" text-anchor="middle">user JWT</text>
+    <text x="292" y="366" font-size="11" fill="#99f6e4" text-anchor="middle">SSE stream</text>
+    <circle cx="292" cy="340" r="11" fill="#07111f" stroke="#5eead4" stroke-width="1.5"/>
+    <text x="292" y="344.5" font-size="12" font-weight="700" fill="#5eead4" text-anchor="middle">2</text>
+
+    <!-- badge 1 on sign-in arrow -->
+    <circle cx="148" cy="180" r="11" fill="#07111f" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="148" y="184.5" font-size="12" font-weight="700" fill="#cbd5e1" text-anchor="middle">1</text>
+
+    <!-- ============ CLOUDWATCH ============ -->
+    <rect x="48" y="584" width="1184" height="110" rx="16" fill="#f472b6" fill-opacity="0.08" stroke="#f9a8d4" stroke-opacity="0.6"/>
+    <text x="72" y="614" font-size="16" font-weight="700" fill="#f8fafc">CloudWatch</text>
+    <text x="192" y="614" font-size="12" fill="#fbcfe8">everything reports here</text>
+
+    <g font-size="13" font-weight="600" fill="#fce7f3" text-anchor="middle">
+      <rect x="72"  y="632" width="172" height="40" rx="10" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.16"/>
+      <text x="158" y="657">OTEL traces</text>
+      <rect x="258" y="632" width="172" height="40" rx="10" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.16"/>
+      <text x="344" y="657">Vended logs</text>
+      <rect x="444" y="632" width="172" height="40" rx="10" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.16"/>
+      <text x="530" y="657">Custom metrics</text>
+      <rect x="630" y="632" width="172" height="40" rx="10" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.16"/>
+      <text x="716" y="657">Dashboard + alarms</text>
+      <rect x="816" y="632" width="172" height="40" rx="10" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.16"/>
+      <text x="902" y="657">Online evaluations</text>
+      <rect x="1002" y="632" width="206" height="40" rx="10" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.16"/>
+      <text x="1105" y="657">User feedback (thumbs)</text>
+    </g>
+
+    <!-- container -> cloudwatch -->
+    <line x1="662" y1="526" x2="662" y2="582" stroke="#f9a8d4" stroke-width="2.5" marker-end="url(#arrowRose)"/>
+    <text x="676" y="552" font-size="12" fill="#fbcfe8">OTEL spans · vended logs · metrics</text>
+
+    <!-- UI feedback -> cloudwatch -->
+    <line x1="148" y1="386" x2="148" y2="582" stroke="#f9a8d4" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrowRose)"/>
+    <text x="164" y="500" font-size="12" fill="#fbcfe8">thumbs feedback,</text>
+    <text x="164" y="516" font-size="12" fill="#fbcfe8">keyed by session id</text>
+  </g>
+</svg>
